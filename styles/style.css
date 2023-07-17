@@ -218,6 +218,78 @@ a {
   height: 100%;
 }
 
+/* ==================== */
+/* Networking logos */
+/* ==================== */
+.networking-logo {
+  margin: 90px 150px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(50px, 1fr)
+  ); /* Adjust the number of columns here */
+  grid-gap: 20px; /* Adjust the gap between images if needed */
+}
+.networking-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ====================
+    Collection
+======================*/
+.collection {
+  margin: 9rem 140px;
+  text-align: center;
+}
+
+.collection__title {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin: 2rem 0;
+}
+.collection__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 2rem 20px;
+}
+.card__img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card {
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.15);
+  text-align: left;
+}
+
+.card__title {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.card .star {
+  margin: 0.4rem 0;
+}
+
+.card__title,
+.collection__desc,
+.card .star,
+.card__price{
+  padding-left:10px ;
+}
+
+.collection__desc {
+  color: #3a3a3ab7;
+  padding: 10px;
+  padding-bottom: 1rem;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 /* || BREAKPOINTS*/
 @media only screen and (max-width: 930px) {
   .header {
@@ -230,23 +302,41 @@ a {
   .nav__list {
     display: none;
   }
-}
-
-/* 800px breakpoint */
+} /* 800px breakpoint */
 
 @media only screen and (max-width: 800px) {
   /* remove fixed width */
   p {
     width: 100% !important;
+    margin: 10px 0;
   }
 
   .influencer {
     flex-direction: column-reverse;
     text-align: center;
+    margin: 0;
   }
   .influencer__background {
     width: 75%;
     margin: 5rem auto 2rem auto;
+  }
+
+  /* networking section */
+  .grid-container {
+    row-gap: 3rem;
+  }
+
+  /* collection */
+  .collection {
+    margin: 0 10px;
+  }
+  .collection__title {
+    font-size: 2rem;
+  }
+  .collection__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
   }
 }
 
@@ -274,5 +364,20 @@ a {
   }
   .influencer__background {
     width: 90%;
+  }
+
+  /* networking section */
+  .networking-logo {
+    margin: 5rem 2rem;
+  }
+
+  /* collection*/
+  .collection {
+    margin: 0 20px;
+  }
+  .collection__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 20px;
   }
 }
