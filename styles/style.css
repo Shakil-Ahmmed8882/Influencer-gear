@@ -66,12 +66,12 @@ h1 {
 
 .header {
   background-color: #fff;
-  margin: 20px 120px;
-  padding: 0 5px;
+  padding: 2rem 1rem;
 }
 
 .header__nav {
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -196,7 +196,8 @@ a {
 /* ==================== */
 
 .influencer {
-  margin: 50px 25px 50px 0;
+  max-width: 1100px;
+  margin: 8rem auto 1rem auto;
 }
 
 .influencer__desc {
@@ -222,7 +223,8 @@ a {
 /* Networking logos */
 /* ==================== */
 .networking-logo {
-  margin: 90px 150px;
+  max-width: 1000px;
+  margin: 1rem auto 1rem auto;
 }
 .grid-container {
   display: grid;
@@ -241,7 +243,8 @@ a {
     Collection
 ======================*/
 .collection {
-  margin: 9rem 140px;
+  max-width: 1100px;
+  margin: 8rem auto 1rem auto;
   text-align: center;
 }
 
@@ -252,7 +255,7 @@ a {
 .collection__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 2rem 20px;
+  gap: 3rem 40px;
 }
 .card__img {
   width: 100%;
@@ -299,15 +302,22 @@ a {
   justify-content: center;
   gap: 2rem;
   max-width: 1000px;
-  margin: 0 auto 4rem auto;
+  margin: 0 auto 0 auto;
+  padding: 4rem 1px;
+}
+.feature__content {
   padding: 0 10px;
 }
 
+.feature__img-wrapper {
+  width: 100%;
+}
+.feature__img-wrapper img {
+  width: 100%;
+  height: 100%;
+}
 /* || BREAKPOINTS*/
 @media only screen and (max-width: 930px) {
-  .header {
-    margin: 25px 40px;
-  }
   .overlay-container {
     display: flex;
   }
@@ -399,7 +409,9 @@ footer {
     font-size: 14px;
   }
   .header {
-    margin: 25px 5px;
+    width: 100%;
+    background-color: rgba(255, 0, 132, 0.087);
+    border-radius: 0 0 20px 20px;
   }
 
   .dec__logo {
@@ -426,7 +438,7 @@ footer {
 
   /* collection*/
   .collection {
-    margin: 0 20px;
+    padding: 0 5px;
   }
   .collection__container {
     display: grid;
@@ -434,7 +446,10 @@ footer {
     gap: 20px;
   }
   /* feature */
+
   .feature-product {
+    background-color: #e02c6e17;
+    border-radius: 10px 10px;
     text-align: left;
   }
   .feature__img {
