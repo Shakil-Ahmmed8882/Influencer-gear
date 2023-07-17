@@ -7,11 +7,86 @@
     <!-- font (poppins) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet" />
     <!-- css file -->
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-      
+    <!-- header -->
+    <header class="header">
+      <nav class="header__nav">
+        <div class="nav__logo mobile__logo"><img src="./influencer-gear/icons/gearlogo.png" ></div>
+        <div class="nav__logo dec__logo">Influencer Products</div>
+        <ul class="nav__list">
+          <li class="nav__item"><a href="">Home</a></li>
+          <li class="nav__item"><a href="">Products</a></li>
+          <li class="nav__item"><a href="">Sign up</a></li>
+          <li class="nav__item"><a href="">login</a></li>
+          <li class="">
+            <a href=""
+              ><img
+                class="nav__search"
+                src="./influencer-gear/icons/search.png"
+                alt="search img"
+            /></a>
+          </li>
+          <li class="">
+            <a href=""
+              ><img
+                class="nav__cart"
+                src="./influencer-gear/icons/cart.png"
+                alt=""
+            /></a>
+          </li>
+        </ul>
+        <!-- mobile menu -->
+        <div class="overlay-container">
+          <span class="open" id="open__nav"
+            ><img src="./influencer-gear/icons/manubar.png"
+          /></span>
+          <div class="inner__overlay" id="overlay">
+            <span class="close" onclick="close__nav()"
+              ><img src="./influencer-gear/icons/close.png" alt=""
+            /></span>
+            <ul class="overlay__link-container">
+              <a class="" href="" onclick="close__nav()">Home</a>
+              <a class="" href="" onclick="close__nav()">Products</a>
+              <a class="" href="" onclick="close__nav()">Sign up</a>
+              <a class="" href="" onclick="close__nav()">Login</a>
+              <a href="" onclick="close__nav()"
+                ><img
+                  class="nav__search"
+                  src="./influencer-gear/icons/search.png"
+                  alt="search img"
+              /></a>
+              <a href="" onclick="close__nav()"
+                ><img
+                  class="nav__cart"
+                  src="./influencer-gear/icons/cart.png"
+                  alt=""
+              /></a>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Script file -->
+    <script>
+      const open = document.getElementById("open__nav");
+      const overlay = document.getElementById("overlay");
+
+      open.addEventListener("click", openFun);
+
+      function openFun() {
+        overlay.style.width = "70%";
+      }
+
+      function close__nav() {
+        overlay.style.width = "0%";
+      }
+    </script>
   </body>
 </html>

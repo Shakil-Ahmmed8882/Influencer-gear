@@ -1,0 +1,194 @@
+/* || REset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* || VARIABLES */
+:root {
+  --primary-color: #e02c6d;
+  --text-color: #fff;
+}
+
+/* || BLOCK */
+.custom-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.custom-button:hover {
+  background-color: #45a049;
+}
+
+body {
+  font-family: "Poppins";
+}
+
+/* ==================== */
+/* Header */
+/* ==================== */
+
+.header {
+  background-color: #fff;
+  margin: 20px 70px;
+}
+
+.header__nav {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  color: #3a3a3a;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav__list {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav__item {
+  padding: 5px 10px;
+  border-radius: 2px;
+  transition: all 0.4s linear;
+}
+
+.nav__item a {
+  color: #3a3a3a;
+  font-size: 15px;
+}
+
+.nav__item:hover {
+  background-color: var(--primary-color);
+}
+
+.nav__item:hover a {
+  color: var(--text-color);
+}
+
+.nav__search {
+  width: 15px;
+}
+
+.nav__cart {
+  width: 35px;
+}
+
+/* ==================== */
+/* MOBILE OVERLAY */
+/* ==================== */
+
+/* mobile logo */
+.mobile__logo {
+  display: none;
+}
+
+.mobile__logo img {
+  width: 34px;
+  margin: -10px 0 0 5px;
+}
+
+.dec__logo {
+  display: block;
+}
+
+.overlay-container {
+  display: none;
+}
+
+.open,
+.close {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+}
+
+.open img,
+.close img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+
+.inner__overlay {
+  position: fixed;
+  width: 0%;
+  height: 100%;
+  background-color: #e32369ea;
+  color: var(--text-color);
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  transition: width 0.3s linear;
+}
+
+.overlay__link-container {
+  all: unset;
+  text-align: center;
+  position: relative;
+  top: 80px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay__link-container > * {
+  all: unset;
+  width: 100%;
+  display: block;
+  padding: 20px;
+  transition: all 0.3s linear;
+}
+
+.overlay__link-container > *:hover {
+  background-color: #00000011;
+}
+
+a {
+  all: unset;
+}
+
+/* || BREAKPOINTS*/
+@media only screen and (max-width: 830px) {
+  .header {
+    margin: 25px 40px;
+  }
+  .overlay-container {
+    display: flex;
+  }
+
+  .nav__list {
+    display: none;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .header {
+    margin: 25px 5px;
+  }
+
+  .dec__logo {
+    display: none;
+  }
+
+  .mobile__logo {
+    display: block;
+  }
+}
